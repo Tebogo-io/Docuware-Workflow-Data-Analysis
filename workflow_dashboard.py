@@ -13,7 +13,7 @@ st.title("DocuWare Workflow Analytics Dashboard")
 st.markdown("Analyze workflow bottlenecks and workflow performance")
 
 # -----------------------
-# Sky Blue Background
+# Background
 # -----------------------
 st.markdown(
     """
@@ -52,7 +52,7 @@ if step_type_filter != "All":
     filtered_df = filtered_df[filtered_df['step_type'] == step_type_filter]
 
 # -----------------------
-# KPI Cards in White Rectangles
+# KPI Cards
 # -----------------------
 total_workflows = filtered_df['workflow_ID'].nunique()
 avg_duration = round(filtered_df['duration_minutes'].mean(), 2)
@@ -80,7 +80,7 @@ st.markdown(
 )
 
 # -----------------------
-# Top Bottleneck Steps with Colors
+# Top Bottleneck Steps
 # -----------------------
 st.subheader("Top 10 Bottleneck Steps")
 bottlenecks = (
@@ -131,4 +131,5 @@ st.pyplot(fig3)
 # Raw Data Table
 # -----------------------
 st.subheader("Workflow Details")
+
 st.dataframe(filtered_df)
