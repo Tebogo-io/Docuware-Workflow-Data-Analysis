@@ -1,0 +1,391 @@
+﻿workflow_ID;step_type;step_order;step_name;completion_time
+QueueDocuments;Data assignment;1;Assign data;02/03/2026 15:38:08
+QueueDocuments;Condition;2;Check If Previous Doc Not Deleted;02/03/2026 15:38:08
+QueueDocuments;Time delay;3;Wait for Queue;02/03/2026 15:39:10
+QueueDocuments;Data assignment;4;Assign Queue Number;02/03/2026 15:39:10
+QueueDocuments;Condition;5;Check if Previous Document Extracted;02/03/2026 15:39:10
+QueueDocuments;Data assignment;6;Get AP Doc ID;02/03/2026 15:39:10
+QueueDocuments;Condition;7;Check if Current Doc ID Not Deleted;02/03/2026 15:39:10
+QueueDocuments;Data assignment;8;Assign Starting Condition;02/03/2026 15:39:10
+0ExtractLineItem;Condition;9;Check Document Type;02/03/2026 15:39:12
+0ExtractLineItem;Data assignment;10;Assign Random;02/03/2026 15:39:12
+0ExtractLineItem;Time delay;11;Wait for Metadata;02/03/2026 15:40:22
+0ExtractLineItem;Data assignment;12;Assign data from Document;02/03/2026 15:40:22
+0ExtractLineItem;Condition;13;Check Duplicate PO;02/03/2026 15:40:22
+0ExtractLineItem;Data assignment;14;Assign Starting Line;02/03/2026 15:40:22
+0ExtractLineItem;Condition;15;Check if end of lines;02/03/2026 15:40:22
+0ExtractLineItem;Data assignment;16;Assign Line to Populate;02/03/2026 15:40:22
+0ExtractLineItem;Data assignment;17;Assign Line Data;02/03/2026 15:40:22
+0ExtractLineItem;Data assignment;18;Remove Illegal Chracters on Line Data;02/03/2026 15:40:22
+0ExtractLineItem;Data assignment;19;Export Line;02/03/2026 15:40:22
+0ExtractLineItem;Data assignment;20;Next Line;02/03/2026 15:40:22
+0ExtractLineItem;Condition;21;Mod 45;02/03/2026 15:40:22
+0ExtractLineItem;Data assignment;14;Assign Starting Line;02/03/2026 15:40:22
+0ExtractLineItem;Condition;15;Check if end of lines;02/03/2026 15:40:22
+0ExtractLineItem;Condition;22;Check if PO;02/03/2026 15:40:22
+0ExtractLineItem;Data assignment;23;Assign PO Line Count;02/03/2026 15:40:22
+0ExtractLineItem;Data assignment;24;Starting Line;02/03/2026 15:40:22
+0ExtractLineItem;Condition;25;While Current Line < PO Line Total;02/03/2026 15:40:22
+0ExtractLineItem;Data assignment;26;Assign Line Current Data;02/03/2026 15:40:22
+0ExtractLineItem;Data assignment;27;Assign New Line Data;02/03/2026 15:40:22
+0ExtractLineItem;Data assignment;28;Assign Data to Line;02/03/2026 15:40:22
+0ExtractLineItem;Data assignment;29;Increment Line;02/03/2026 15:40:22
+0ExtractLineItem;Condition;30;Mod 45_copy_copy;02/03/2026 15:40:22
+0ExtractLineItem;Condition;25;While Current Line < PO Line Total;02/03/2026 15:40:22
+0ExtractLineItem;Data assignment;31;Final Status Update;02/03/2026 15:40:22
+0EnhanceMetaData;Data assignment;32;Assign data;02/03/2026 15:39:14
+0EnhanceMetaData;Data assignment;33;Retrieve Data;02/03/2026 15:39:14
+0EnhanceMetaData;Condition;34;Check Supplier Tax Code;02/03/2026 15:39:14
+0EnhanceMetaData;Data assignment;35;Get Supplier VAT;02/03/2026 15:39:14
+0EnhanceMetaData;Data assignment;36;Assign data to Document;02/03/2026 15:39:14
+0EnhanceMetaData;Condition;37;Document Type PO;02/03/2026 15:39:14
+0EnhanceMetaData;Condition;38;Document Type Delivery Note;02/03/2026 15:39:14
+0EnhanceMetaData;Condition;39;Document Type Credit Note;02/03/2026 15:39:14
+0EnhanceMetaData;Condition;40;Document Type Invoice;02/03/2026 15:39:14
+0EnhanceMetaData;Data assignment;41;Assign Invoice Data;02/03/2026 15:39:14
+0.2InvoiceReceived;Data assignment;42;Assign data from Document;02/03/2026 15:40:27
+0.2InvoiceReceived;Data assignment;43;Assign Starting Line;02/03/2026 15:40:27
+0.2InvoiceReceived;Condition;44;Check if end of lines;02/03/2026 15:40:27
+0.2InvoiceReceived;Data assignment;45;Assign Line Data;02/03/2026 15:40:27
+0.2InvoiceReceived;Condition;46;Check Blocked Cost Center ;02/03/2026 15:40:27
+0.2InvoiceReceived;Data assignment;47;Table Field Assignment;02/03/2026 15:40:27
+0.2InvoiceReceived;Condition;48;Check if Line Data;02/03/2026 15:40:27
+0.2InvoiceReceived;Condition;49;Check Cost Center;02/03/2026 15:40:27
+0.2InvoiceReceived;Data assignment;50;Next Line;02/03/2026 15:40:27
+0.2InvoiceReceived;Condition;51;Mod 45;02/03/2026 15:40:27
+0.2InvoiceReceived;Data assignment;43;Assign Starting Line;02/03/2026 15:40:27
+0.2InvoiceReceived;Condition;44;Check if end of lines;02/03/2026 15:40:27
+0.2InvoiceReceived;Data assignment;52;Final Status Update;02/03/2026 15:40:27
+1Validation;Data assignment;53;Set information;02/03/2026 15:40:36
+1Validation;Data assignment;54;Assign PO DocID;02/03/2026 15:40:36
+1Validation;Condition;55;PO Check;02/03/2026 15:40:36
+1Validation;Data assignment;56;Assign PO Status;02/03/2026 15:40:36
+1Validation;Data assignment;57;Data for Onboarding;02/03/2026 15:40:36
+1Validation;Condition;58;Onboarding Required Checks;02/03/2026 15:40:36
+1Validation;Data assignment;59;Set Onboarding Required Checks;02/03/2026 15:40:36
+1Validation;Condition;60;Supplier check activated;02/03/2026 15:40:36
+1Validation;User assignment;61;Assign to Validation;02/03/2026 15:40:36
+1Validation;Data assignment;62;Connect client and supplier;02/03/2026 15:40:36
+1Validation;Condition;63;Combination valid;02/03/2026 15:40:36
+1Validation;Data assignment;64;Get supplier account;02/03/2026 15:40:36
+1Validation;Condition;65;Supplier account available;02/03/2026 15:40:36
+1Validation;Condition;66;Supplier account2 > 1;02/03/2026 15:40:36
+1Validation;Data assignment;67;Enter supplier account;02/03/2026 15:40:36
+1Validation;Condition;68;Supplier and account valid;02/03/2026 15:40:36
+1Validation;Data assignment;69;Financial Year;02/03/2026 15:40:36
+1Validation;Condition;70;Financial year with 0101;02/03/2026 15:40:36
+1Validation;Data assignment;71;Start FY new order;02/03/2026 15:40:36
+1Validation;Data assignment;72;Duplicate check;02/03/2026 15:40:36
+1Validation;Condition;73;Duplicate available;02/03/2026 15:40:36
+1Validation;Condition;74;Supplier check activated part 2;02/03/2026 15:40:36
+1Validation;Data assignment;75;Request discount;02/03/2026 15:40:36
+1Validation;Condition;76;Discount available;02/03/2026 15:40:36
+1Validation;Condition;77;Due date available;02/03/2026 15:40:36
+1Validation;Data assignment;78;0 discount;02/03/2026 15:40:36
+1Validation;Data assignment;79;Reminder date;02/03/2026 15:40:36
+1Validation;Condition;80;Reminder too short;02/03/2026 15:40:36
+1Validation;Condition;81;Mandatory check activated;02/03/2026 15:40:36
+1Validation;Condition;82;Check VAT ID;02/03/2026 15:40:36
+1Validation;Condition;83;Check Invoice Number;02/03/2026 15:40:36
+1Validation;Condition;84;Invoice Number available;02/03/2026 15:40:36
+1Validation;Condition;85;Check Invoice Amounts;02/03/2026 15:40:36
+1Validation;Data assignment;86;Amount calculation;02/03/2026 15:40:36
+1Validation;Condition;87;Gross amount correct;02/03/2026 15:40:36
+1Validation;Condition;88;Net amounts and tax amounts are missing;02/03/2026 15:40:36
+1Validation;Condition;89;Different tax amounts;02/03/2026 15:40:36
+1Validation;Data assignment;90;Incorrect tax amount;02/03/2026 15:40:36
+1Validation;Condition;91;No Line Items;02/03/2026 15:40:36
+1Validation;Data assignment;92;Calculate Lines;02/03/2026 15:40:36
+1Validation;Condition;93;Line Item Deviation;02/03/2026 15:40:36
+1Validation;Data assignment;94;Next Line;02/03/2026 15:40:36
+1Validation;Condition;95;Mod 45;02/03/2026 15:40:36
+1Validation;Condition;96;All Line Items processed;02/03/2026 15:40:36
+1Validation;Condition;97;Line Items Total Amount vs Document Total Amount;02/03/2026 15:40:36
+1Validation;Condition;98;Check Tax Rate;02/03/2026 15:40:36
+1Validation;Condition;99;Mandatory information correct;02/03/2026 15:40:36
+1Validation;User assignment;100;Validation;02/03/2026 15:40:36
+1Validation;General Task;101;Verify required data;02/03/2026 15:42:29
+1Validation;Data assignment;72;Duplicate check;02/03/2026 15:42:35
+1Validation;Condition;73;Duplicate available;02/03/2026 15:42:35
+1Validation;Condition;74;Supplier check activated part 2;02/03/2026 15:42:35
+1Validation;Data assignment;75;Request discount;02/03/2026 15:42:35
+1Validation;Condition;76;Discount available;02/03/2026 15:42:35
+1Validation;Condition;77;Due date available;02/03/2026 15:42:35
+1Validation;Data assignment;78;0 discount;02/03/2026 15:42:35
+1Validation;Data assignment;79;Reminder date;02/03/2026 15:42:35
+1Validation;Condition;80;Reminder too short;02/03/2026 15:42:35
+1Validation;Condition;81;Mandatory check activated;02/03/2026 15:42:35
+1Validation;Condition;82;Check VAT ID;02/03/2026 15:42:35
+1Validation;Condition;83;Check Invoice Number;02/03/2026 15:42:35
+1Validation;Condition;84;Invoice Number available;02/03/2026 15:42:35
+1Validation;Condition;85;Check Invoice Amounts;02/03/2026 15:42:35
+1Validation;Data assignment;86;Amount calculation;02/03/2026 15:42:35
+1Validation;Condition;87;Gross amount correct;02/03/2026 15:42:35
+1Validation;Condition;88;Net amounts and tax amounts are missing;02/03/2026 15:42:35
+1Validation;Condition;89;Different tax amounts;02/03/2026 15:42:35
+1Validation;Condition;91;No Line Items;02/03/2026 15:42:35
+1Validation;Data assignment;92;Calculate Lines;02/03/2026 15:42:35
+1Validation;Condition;93;Line Item Deviation;02/03/2026 15:42:35
+1Validation;Data assignment;94;Next Line;02/03/2026 15:42:35
+1Validation;Condition;95;Mod 45;02/03/2026 15:42:35
+1Validation;Condition;96;All Line Items processed;02/03/2026 15:42:35
+1Validation;Condition;97;Line Items Total Amount vs Document Total Amount;02/03/2026 15:42:35
+1Validation;Condition;98;Check Tax Rate;02/03/2026 15:42:35
+1Validation;Condition;99;Mandatory information correct;02/03/2026 15:42:35
+1Validation;Data assignment;102;Order reference;02/03/2026 15:42:35
+1Validation;Condition;103;Order deviation;02/03/2026 15:42:35
+1Validation;Condition;104;Approval activated;02/03/2026 15:42:35
+1Validation;Data assignment;105;Approval;02/03/2026 15:42:35
+1Validation;Data assignment;106;Process duration;02/03/2026 15:42:35
+1.2InvoiceAutoAssignment;Data assignment;107;Assign data from Document;02/03/2026 15:42:37
+1.2InvoiceAutoAssignment;Condition;108;Check Skip;02/03/2026 15:42:37
+1.2InvoiceAutoAssignment;Data assignment;109;Final Status Update;02/03/2026 15:42:37
+2Approval;Data assignment;110;Set information;02/03/2026 15:42:40
+2Approval;Data assignment;111;Onboarding data;02/03/2026 15:42:40
+2Approval;User assignment;112;Assign to invoice distribution;02/03/2026 15:42:40
+2Approval;Data assignment;113;Status;02/03/2026 15:42:40
+2Approval;Condition;114;Check Skip;02/03/2026 15:42:40
+2Approval;Condition;115;Requestor Selected;02/03/2026 15:42:40
+2Approval;Condition;116;Cost centre approval activated;02/03/2026 15:42:40
+2Approval;Condition;117;Mobile App;02/03/2026 15:42:40
+2Approval;Data assignment;118;Approval cost centre;02/03/2026 15:42:40
+2Approval;Condition;119;Determine cost centres;02/03/2026 15:42:40
+2Approval;Data assignment;120;Save group;02/03/2026 15:42:40
+2Approval;Data assignment;121;Counter increase;02/03/2026 15:42:40
+2Approval;Condition;122;every 49 times;02/03/2026 15:42:40
+2Approval;Condition;123;All CCG;02/03/2026 15:42:40
+2Approval;Data assignment;124;Next Loop;02/03/2026 15:42:40
+2Approval;Data assignment;125;CCGroup;02/03/2026 15:42:40
+2Approval;Condition;126;Delayed instance start;02/03/2026 15:42:40
+2Approval;Wait for event;127;Validation started;02/03/2026 15:42:44
+2Approval;Data assignment;128;Counter increase about 1;02/03/2026 15:42:44
+2Approval;Condition;129;All CCGroups;02/03/2026 15:42:44
+2Approval;Time delay;130;Wait again ;02/03/2026 15:43:47
+2Approval;Data assignment;131;Invoice Assigned;02/03/2026 15:43:47
+2Approval;Data assignment;132;Process duration;02/03/2026 15:43:47
+2ApprovalCostCentre;Data assignment;133;First allocation;02/03/2026 15:42:41
+2ApprovalCostCentre;Data assignment;134;Set variable;02/03/2026 15:42:41
+2ApprovalCostCentre;User assignment;135;First Approver;02/03/2026 15:42:41
+2ApprovalCostCentre;Condition;136;Mobile App;02/03/2026 15:42:41
+2ApprovalCostCentre;Data assignment;137;Cost group;02/03/2026 15:42:41
+2ApprovalCostCentre;Condition;138;Amount for cost centre;02/03/2026 15:42:41
+2ApprovalCostCentre;Data assignment;139;Add amount;02/03/2026 15:42:41
+2ApprovalCostCentre;Data assignment;140;Increase counter;02/03/2026 15:42:41
+2ApprovalCostCentre;Condition;141;Additional group;02/03/2026 15:42:41
+2ApprovalCostCentre;Wait for event;142;CCAssignmentComplete;02/03/2026 15:43:49
+2ApprovalCostCentre;Condition;143;GL Prefill;02/03/2026 15:43:49
+2ApprovalCostCentre;General Task;144;Check Amount Line item;02/03/2026 16:38:12
+2ApprovalCostCentre;Data assignment;145;Get Limit;02/03/2026 16:38:17
+2ApprovalCostCentre;Condition;146;Limit exceeded;02/03/2026 16:38:17
+2ApprovalCostCentre;Data assignment;147;Cost centre group done;02/03/2026 16:38:17
+2ApprovalCostCentre;Data assignment;148;Content of cost centre;02/03/2026 16:38:17
+2ApprovalCostCentre;Condition;149;All groups processed;02/03/2026 16:38:17
+2ApprovalCostCentre;Condition;150;Check status;02/03/2026 16:38:17
+2ApprovalCostCentre;Condition;151;Completion activated;02/03/2026 16:38:17
+2ApprovalCostCentre;Data assignment;152;Completion;02/03/2026 16:38:17
+2ApprovalCostCentre;Data assignment;153;Process duration;02/03/2026 16:38:17
+4Completion;Data assignment;154;Set variable;02/03/2026 16:38:19
+4Completion;Data assignment;155;Data for onboarding;02/03/2026 16:38:19
+4Completion;User assignment;156;Assign to Completion;02/03/2026 16:38:19
+4Completion;Condition;157;Mandatory check and booking batch;02/03/2026 16:38:19
+4Completion;General Task;158;Completion;02/03/2026 16:59:52
+4Completion;Data assignment;159;Process duration;02/03/2026 16:59:57
+5PrepareBookingRecords;Data assignment;160;Set variable;02/03/2026 17:00:11
+5PrepareBookingRecords;Data assignment;161;Data for onboarding;02/03/2026 17:00:11
+5PrepareBookingRecords;Data assignment;162;Define Expor Filename;02/03/2026 17:00:11
+5PrepareBookingRecords;Data assignment;163;GL accounts;02/03/2026 17:00:11
+5PrepareBookingRecords;Data assignment;164;Numbers of row;02/03/2026 17:00:11
+5PrepareBookingRecords;Data assignment;165;Current row;02/03/2026 17:00:11
+5PrepareBookingRecords;Condition;166;Gross or Net;02/03/2026 17:00:11
+5PrepareBookingRecords;Data assignment;167;Calculate gross amount;02/03/2026 17:00:11
+5PrepareBookingRecords;Data assignment;168;Rounding;02/03/2026 17:00:11
+5PrepareBookingRecords;Data assignment;169;Current account;02/03/2026 17:00:11
+5PrepareBookingRecords;Condition;170;Automatic account;02/03/2026 17:00:11
+5PrepareBookingRecords;Condition;171;Account;02/03/2026 17:00:11
+5PrepareBookingRecords;Data assignment;172;Account name;02/03/2026 17:00:11
+5PrepareBookingRecords;Condition;173;Cost centre;02/03/2026 17:00:11
+5PrepareBookingRecords;Data assignment;174;Cost centre name;02/03/2026 17:00:11
+5PrepareBookingRecords;Condition;175;CreditDebit;02/03/2026 17:00:11
+5PrepareBookingRecords;Data assignment;176;Debt;02/03/2026 17:00:11
+5PrepareBookingRecords;Condition;177;Revert Sign;02/03/2026 17:00:11
+5PrepareBookingRecords;Data assignment;178;Maintain amount;02/03/2026 17:00:11
+5PrepareBookingRecords;Condition;179;Tax rate;02/03/2026 17:00:11
+5PrepareBookingRecords;Data assignment;180;Tax rate name;02/03/2026 17:00:11
+5PrepareBookingRecords;Data assignment;181;Increase counter;02/03/2026 17:00:11
+5PrepareBookingRecords;Condition;182;Counter = number of keywords;02/03/2026 17:00:11
+5PrepareBookingRecords;Condition;183;Coding Base part 2;02/03/2026 17:00:11
+5PrepareBookingRecords;Condition;184;Gross amount comparison correct;02/03/2026 17:00:11
+5PrepareBookingRecords;Data assignment;185;Flag for Export;02/03/2026 17:00:11
+6UpdateInvoiceLineItems;Data assignment;186;Assign data from Document;02/03/2026 17:00:17
+6UpdateInvoiceLineItems;Data assignment;187;Assign Starting Line;02/03/2026 17:00:17
+6UpdateInvoiceLineItems;Condition;188;Check if end of lines;02/03/2026 17:00:17
+6UpdateInvoiceLineItems;Data assignment;189;Assign Line Data;02/03/2026 17:00:17
+6UpdateInvoiceLineItems;Data assignment;190;Remove Illegal Chracters on Line Data;02/03/2026 17:00:17
+6UpdateInvoiceLineItems;Data assignment;191;Export Line;02/03/2026 17:00:17
+6UpdateInvoiceLineItems;Data assignment;192;Next Line;02/03/2026 17:00:17
+6UpdateInvoiceLineItems;Condition;193;Mod 45;02/03/2026 17:00:17
+6UpdateInvoiceLineItems;Data assignment;194;Assign Starting Line;02/03/2026 17:00:17
+6UpdateInvoiceLineItems;Condition;195;Check if end of lines;02/03/2026 17:00:17
+6UpdateInvoiceLineItems;Data assignment;196;Final Status Update;02/03/2026 17:00:17
+7PurchaseInvoice;Data assignment;197;Assign Random data;02/03/2026 17:00:12
+7PurchaseInvoice;Time delay;198;Wait for data to update;02/03/2026 17:09:17
+7PurchaseInvoice;Data assignment;199;Assign Setting Name;02/03/2026 17:09:17
+7PurchaseInvoice;Data assignment;200;Assign PI Number from Palladium;02/03/2026 17:09:17
+7PurchaseInvoice;Data assignment;201;Increment PI Number;02/03/2026 17:09:17
+7PurchaseInvoice;Time delay;202;Wait for Number;02/03/2026 17:11:19
+7PurchaseInvoice;Data assignment;203;Assign PI DocID;02/03/2026 17:11:19
+7PurchaseInvoice;Condition;204;Check if PI Number Exists;02/03/2026 17:11:19
+7PurchaseInvoice;Data assignment;205;Increment Count;02/03/2026 17:11:19
+7PurchaseInvoice;Condition;206;Mod 45   ;02/03/2026 17:11:19
+7PurchaseInvoice;Data assignment;200;Assign PI Number from Palladium;02/03/2026 17:11:19
+7PurchaseInvoice;Data assignment;201;Increment PI Number;02/03/2026 17:11:19
+7PurchaseInvoice;Time delay;202;Wait for Number;02/03/2026 17:13:20
+7PurchaseInvoice;Data assignment;203;Assign PI DocID;02/03/2026 17:13:20
+7PurchaseInvoice;Condition;204;Check if PI Number Exists;02/03/2026 17:13:20
+7PurchaseInvoice;Data assignment;205;Increment Count;02/03/2026 17:13:20
+7PurchaseInvoice;Condition;206;Mod 45   ;02/03/2026 17:13:20
+7PurchaseInvoice;Data assignment;200;Assign PI Number from Palladium;02/03/2026 17:13:20
+7PurchaseInvoice;Data assignment;201;Increment PI Number;02/03/2026 17:13:20
+7PurchaseInvoice;Time delay;202;Wait for Number;02/03/2026 17:15:21
+7PurchaseInvoice;Data assignment;203;Assign PI DocID;02/03/2026 17:15:21
+7PurchaseInvoice;Condition;204;Check if PI Number Exists;02/03/2026 17:15:21
+7PurchaseInvoice;Data assignment;205;Increment Count;02/03/2026 17:15:21
+7PurchaseInvoice;Condition;206;Mod 45   ;02/03/2026 17:15:21
+7PurchaseInvoice;Data assignment;200;Assign PI Number from Palladium;02/03/2026 17:15:21
+7PurchaseInvoice;Data assignment;201;Increment PI Number;02/03/2026 17:15:21
+7PurchaseInvoice;Time delay;202;Wait for Number;02/03/2026 17:17:22
+7PurchaseInvoice;Data assignment;203;Assign PI DocID;02/03/2026 17:17:22
+7PurchaseInvoice;Condition;204;Check if PI Number Exists;02/03/2026 17:17:22
+7PurchaseInvoice;Data assignment;205;Increment Count;02/03/2026 17:17:22
+7PurchaseInvoice;Condition;206;Mod 45   ;02/03/2026 17:17:22
+7PurchaseInvoice;Data assignment;200;Assign PI Number from Palladium;02/03/2026 17:17:22
+7PurchaseInvoice;Data assignment;201;Increment PI Number;02/03/2026 17:17:22
+7PurchaseInvoice;Time delay;202;Wait for Number;02/03/2026 17:19:23
+7PurchaseInvoice;Data assignment;203;Assign PI DocID;02/03/2026 17:19:23
+7PurchaseInvoice;Condition;204;Check if PI Number Exists;02/03/2026 17:19:23
+7PurchaseInvoice;Data assignment;205;Increment Count;02/03/2026 17:19:23
+7PurchaseInvoice;Condition;206;Mod 45   ;02/03/2026 17:19:23
+7PurchaseInvoice;Data assignment;200;Assign PI Number from Palladium;02/03/2026 17:19:23
+7PurchaseInvoice;Data assignment;201;Increment PI Number;02/03/2026 17:19:23
+7PurchaseInvoice;Time delay;202;Wait for Number;02/03/2026 17:21:24
+7PurchaseInvoice;Data assignment;203;Assign PI DocID;02/03/2026 17:21:24
+7PurchaseInvoice;Condition;204;Check if PI Number Exists;02/03/2026 17:21:24
+7PurchaseInvoice;Data assignment;205;Increment Count;02/03/2026 17:21:24
+7PurchaseInvoice;Condition;206;Mod 45   ;02/03/2026 17:21:24
+7PurchaseInvoice;Data assignment;200;Assign PI Number from Palladium;02/03/2026 17:21:24
+7PurchaseInvoice;Data assignment;201;Increment PI Number;02/03/2026 17:21:24
+7PurchaseInvoice;Time delay;202;Wait for Number;02/03/2026 17:23:25
+7PurchaseInvoice;Data assignment;203;Assign PI DocID;02/03/2026 17:23:25
+7PurchaseInvoice;Condition;204;Check if PI Number Exists;02/03/2026 17:23:25
+7PurchaseInvoice;Data assignment;205;Increment Count;02/03/2026 17:23:25
+7PurchaseInvoice;Condition;206;Mod 45   ;02/03/2026 17:23:25
+7PurchaseInvoice;Data assignment;200;Assign PI Number from Palladium;02/03/2026 17:23:25
+7PurchaseInvoice;Data assignment;201;Increment PI Number;02/03/2026 17:23:25
+7PurchaseInvoice;Time delay;202;Wait for Number;02/03/2026 17:25:26
+7PurchaseInvoice;Data assignment;203;Assign PI DocID;02/03/2026 17:25:26
+7PurchaseInvoice;Condition;204;Check if PI Number Exists;02/03/2026 17:25:26
+7PurchaseInvoice;Data assignment;205;Increment Count;02/03/2026 17:25:26
+7PurchaseInvoice;Condition;206;Mod 45   ;02/03/2026 17:25:26
+7PurchaseInvoice;Data assignment;200;Assign PI Number from Palladium;02/03/2026 17:25:26
+7PurchaseInvoice;Data assignment;201;Increment PI Number;02/03/2026 17:25:26
+7PurchaseInvoice;Time delay;202;Wait for Number;02/03/2026 17:27:28
+7PurchaseInvoice;Data assignment;203;Assign PI DocID;02/03/2026 17:27:28
+7PurchaseInvoice;Condition;204;Check if PI Number Exists;02/03/2026 17:27:28
+7PurchaseInvoice;Data assignment;205;Increment Count;02/03/2026 17:27:28
+7PurchaseInvoice;Condition;206;Mod 45   ;02/03/2026 17:27:28
+7PurchaseInvoice;Data assignment;200;Assign PI Number from Palladium;02/03/2026 17:27:28
+7PurchaseInvoice;Data assignment;201;Increment PI Number;02/03/2026 17:27:28
+7PurchaseInvoice;Time delay;202;Wait for Number;02/03/2026 17:29:29
+7PurchaseInvoice;Data assignment;203;Assign PI DocID;02/03/2026 17:29:29
+7PurchaseInvoice;Condition;204;Check if PI Number Exists;02/03/2026 17:29:29
+7PurchaseInvoice;Data assignment;205;Increment Count;02/03/2026 17:29:29
+7PurchaseInvoice;Condition;206;Mod 45   ;02/03/2026 17:29:29
+7PurchaseInvoice;Data assignment;200;Assign PI Number from Palladium;02/03/2026 17:29:29
+7PurchaseInvoice;Data assignment;201;Increment PI Number;02/03/2026 17:29:29
+7PurchaseInvoice;Time delay;202;Wait for Number;02/03/2026 17:31:31
+7PurchaseInvoice;Data assignment;203;Assign PI DocID;02/03/2026 17:31:31
+7PurchaseInvoice;Condition;204;Check if PI Number Exists;02/03/2026 17:31:31
+7PurchaseInvoice;Data assignment;205;Increment Count;02/03/2026 17:31:31
+7PurchaseInvoice;Condition;206;Mod 45   ;02/03/2026 17:31:31
+7PurchaseInvoice;Data assignment;200;Assign PI Number from Palladium;02/03/2026 17:31:31
+7PurchaseInvoice;Data assignment;201;Increment PI Number;02/03/2026 17:31:31
+7PurchaseInvoice;Time delay;202;Wait for Number;02/03/2026 17:33:32
+7PurchaseInvoice;Data assignment;203;Assign PI DocID;02/03/2026 17:33:32
+7PurchaseInvoice;Condition;204;Check if PI Number Exists;02/03/2026 17:33:32
+7PurchaseInvoice;Data assignment;205;Increment Count;02/03/2026 17:33:32
+7PurchaseInvoice;Condition;206;Mod 45   ;02/03/2026 17:33:32
+7PurchaseInvoice;Data assignment;200;Assign PI Number from Palladium;02/03/2026 17:33:32
+7PurchaseInvoice;Data assignment;201;Increment PI Number;02/03/2026 17:33:32
+7PurchaseInvoice;Time delay;202;Wait for Number;02/03/2026 17:35:33
+7PurchaseInvoice;Data assignment;203;Assign PI DocID;02/03/2026 17:35:33
+7PurchaseInvoice;Condition;204;Check if PI Number Exists;02/03/2026 17:35:33
+7PurchaseInvoice;Data assignment;205;Increment Count;02/03/2026 17:35:33
+7PurchaseInvoice;Condition;206;Mod 45   ;02/03/2026 17:35:33
+7PurchaseInvoice;Data assignment;200;Assign PI Number from Palladium;02/03/2026 17:35:33
+7PurchaseInvoice;Data assignment;201;Increment PI Number;02/03/2026 17:35:33
+7PurchaseInvoice;Time delay;202;Wait for Number;02/03/2026 17:37:35
+7PurchaseInvoice;Data assignment;203;Assign PI DocID;02/03/2026 17:37:35
+7PurchaseInvoice;Condition;204;Check if PI Number Exists;02/03/2026 17:37:35
+7PurchaseInvoice;Data assignment;205;Increment Count;02/03/2026 17:37:35
+7PurchaseInvoice;Condition;206;Mod 45   ;02/03/2026 17:37:35
+7PurchaseInvoice;Data assignment;200;Assign PI Number from Palladium;02/03/2026 17:37:35
+7PurchaseInvoice;Data assignment;201;Increment PI Number;02/03/2026 17:37:35
+7PurchaseInvoice;Time delay;202;Wait for Number;02/03/2026 17:39:36
+7PurchaseInvoice;Data assignment;203;Assign PI DocID;02/03/2026 17:39:36
+7PurchaseInvoice;Condition;204;Check if PI Number Exists;02/03/2026 17:39:36
+7PurchaseInvoice;Data assignment;205;Increment Count;02/03/2026 17:39:36
+7PurchaseInvoice;Condition;206;Mod 45   ;02/03/2026 17:39:36
+7PurchaseInvoice;Data assignment;200;Assign PI Number from Palladium;02/03/2026 17:39:36
+7PurchaseInvoice;Data assignment;201;Increment PI Number;02/03/2026 17:39:36
+7PurchaseInvoice;Time delay;202;Wait for Number;02/03/2026 17:41:37
+7PurchaseInvoice;Data assignment;203;Assign PI DocID;02/03/2026 17:41:37
+7PurchaseInvoice;Condition;204;Check if PI Number Exists;02/03/2026 17:41:37
+7PurchaseInvoice;Data assignment;205;Increment Count;02/03/2026 17:41:37
+7PurchaseInvoice;Condition;206;Mod 45   ;02/03/2026 17:41:37
+7PurchaseInvoice;Data assignment;200;Assign PI Number from Palladium;02/03/2026 17:41:37
+7PurchaseInvoice;Data assignment;201;Increment PI Number;02/03/2026 17:41:37
+7PurchaseInvoice;Time delay;202;Wait for Number;02/03/2026 17:43:39
+7PurchaseInvoice;Data assignment;203;Assign PI DocID;02/03/2026 17:43:39
+7PurchaseInvoice;Condition;204;Check if PI Number Exists;02/03/2026 17:43:39
+7PurchaseInvoice;Data assignment;205;Increment Count;02/03/2026 17:43:39
+7PurchaseInvoice;Condition;206;Mod 45   ;02/03/2026 17:43:39
+7PurchaseInvoice;Data assignment;200;Assign PI Number from Palladium;02/03/2026 17:43:39
+7PurchaseInvoice;Data assignment;201;Increment PI Number;02/03/2026 17:43:39
+7PurchaseInvoice;Time delay;202;Wait for Number;02/03/2026 17:45:49
+7PurchaseInvoice;Data assignment;203;Assign PI DocID;02/03/2026 17:45:49
+7PurchaseInvoice;Condition;204;Check if PI Number Exists;02/03/2026 17:45:49
+7PurchaseInvoice;Data assignment;207;Assign Inv Data;02/03/2026 17:45:49
+7PurchaseInvoice;Data assignment;208;Assign Line Count;02/03/2026 17:45:49
+7PurchaseInvoice;Data assignment;209;Assign Line Data;02/03/2026 17:45:49
+7PurchaseInvoice;Data assignment;210;Assign Additional data;02/03/2026 17:45:49
+7PurchaseInvoice;Data assignment;211;Assign Line to Keyword;02/03/2026 17:45:49
+7PurchaseInvoice;Condition;212;Check if last line;02/03/2026 17:45:49
+7PurchaseInvoice;Condition;213;Check Required Variables;02/03/2026 17:45:49
+7PurchaseInvoice;Condition;214;Check Skip;02/03/2026 17:45:49
+7PurchaseInvoice;Data assignment;215;Document Gross Amount;02/03/2026 17:45:49
+7PurchaseInvoice;Condition;216;Check Gross Amount;02/03/2026 17:45:49
+7PurchaseInvoice;Data assignment;217;Document Sub Total;02/03/2026 17:45:49
+7PurchaseInvoice;Condition;218;Check Sub Total Amount;02/03/2026 17:45:49
+7PurchaseInvoice;Data assignment;219;Document Tax Amount;02/03/2026 17:45:49
+7PurchaseInvoice;Condition;220;Check VAT Amount;02/03/2026 17:45:49
+7PurchaseInvoice;Data assignment;221;Document Lines;02/03/2026 17:45:49
+7PurchaseInvoice;Condition;222;Check Line Deviation;02/03/2026 17:45:49
+7PurchaseInvoice;Data assignment;223;Next Line;02/03/2026 17:45:49
+7PurchaseInvoice;Condition;224;Mod 45 ;02/03/2026 17:45:49
+7PurchaseInvoice;Condition;225;All line Processed;02/03/2026 17:45:49
+7PurchaseInvoice;Condition;226;Check Price Inclusive;02/03/2026 17:45:49
+7PurchaseInvoice;Data assignment;227;Assign IsPrice Tax Inclusive;02/03/2026 17:45:49
+7PurchaseInvoice;Data assignment;228;Document Lines ;02/03/2026 17:45:49
+7PurchaseInvoice;Condition;229;Check if End of Line;02/03/2026 17:45:49
+7PurchaseInvoice;Data assignment;230;Update Line Items;02/03/2026 17:45:49
+7PurchaseInvoice;Data assignment;231;Assign Data to Line;02/03/2026 17:45:49
+7PurchaseInvoice;Condition;232;Mod 45  ;02/03/2026 17:45:49
+7PurchaseInvoice;Condition;233;Check if End of Line;02/03/2026 17:45:49
+7PurchaseInvoice;Condition;234;Check Sum of all lines vs Document Total;02/03/2026 17:45:49
+7PurchaseInvoice;Data assignment;235;Assign Document error;02/03/2026 17:45:49
+7PurchaseInvoice;Condition;236;Check Error ;02/03/2026 17:45:49
+7PurchaseInvoice;Web service;237;Submit Inv Data;02/03/2026 17:45:49
+7PurchaseInvoice;Condition;238;Check if Success;02/03/2026 17:45:49
+7PurchaseInvoice;Data assignment;239;Assign Webservice Call Data Back to Document;02/03/2026 17:45:49
+7PurchaseInvoice;Data assignment;240;Assign PO Status;02/03/2026 17:45:49
+7PurchaseInvoice;Condition;241;Check Delivery Note;02/03/2026 17:45:49
